@@ -283,6 +283,8 @@ spec:
       tolerations:
         {{ tolerations | indent(width=8) }}
 {% endif %}
+      securityContext:
+        fsGroup: 1000
       volumes:
 {% if bundle_ca_crt %}
         - name: "ca-trust-extracted"
